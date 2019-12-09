@@ -60,7 +60,8 @@ data C = CL T.Text | CP Proof | CC T.Text
 
 type Parser = Parsec Void T.Text
 
-type StepLabel = Maybe T.Text
+data StepLabel = None | StepLabel (Maybe T.Text)
+  deriving (Show, Eq, Ord)
 type ProofBody = T.Text
 
 data ProofToken = Line StepLabel | Proof ProofBody | ProofEnd | NestedProof Proof
@@ -81,11 +82,11 @@ latexExpr = T.concatMap subst  -- T.pack . map subst . AM.run . T.unpack
 latexProof :: Proof -> [T.Text]
 latexProof ls0 = ["\\begin{prooftree}"]<> go ls0 <> ["\\end{prooftree}"]
   where
+      go (P (R j) None []) = ["\\AxiomC{" <> latexExpr j <> "}"]
       go (P (R j) m ls) = pushArgs ls <> pushLine m <> pushRes j ls
-      pushArgs = concatMap  go
-      pushLine m
-        | Just a <- m = ["\\RightLabel{\\scriptsize(" <> a <> ")}"]
-        | otherwise = []
+      pushArgs = concatMap go
+      pushLine (StepLabel (Just a)) = ["\\RightLabel{\\scriptsize(" <> a <> ")}"]
+      pushLine _ = []
       pushRes j ls = case length ls of
            0 -> ["\\AxiomC{}", "\\UnaryInfC{" <> e  <> "}"]
            1 -> ["\\UnaryInfC{" <> e <>  "}"]
@@ -96,8 +97,8 @@ latexProof ls0 = ["\\begin{prooftree}"]<> go ls0 <> ["\\end{prooftree}"]
            _ -> error ("Only up to 5 inferences")
        where e = latexExpr j
 
-parseLine :: Parser (Maybe T.Text)
-parseLine = label "sepLine" $ atLeast 4 ('-' <$ string "\212\196\187" <|> char '⎯' <|> char '-') >> optional (many (satisfy (==' '))>> nonemptyString)
+parseLine :: Parser StepLabel
+parseLine = label "sepLine" $ atLeast 4 ('-' <$ string "\212\196\187" <|> char '⎯' <|> char '-') >> StepLabel <$> optional (many (satisfy (==' '))>> nonemptyString)
   where
     nonemptyString = takeWhile1P Nothing (not . (=='\n'))
     atLeast i a = do
@@ -168,7 +169,7 @@ parseTokens ((p, Proof b) : (p1, Line n):rs)
   | p == p1 =  P (R b) n  (parseTokens0 l) : parseTokens r
   where (l,r) = splitStep p rs
 parseTokens ((p, Proof b):rs)
-  | l == [] = P (R b) Nothing [] : parseTokens r
+  | l == [] = P (R b) None [] : parseTokens r
   where (l,r) = splitStep p rs
 parseTokens [] = []
 parseTokens ls = error ("unknown pattern: " <> show ls)

@@ -44,7 +44,7 @@
                 ----  >
                 np
             ----  >
-            ((s\np)\(s\np))       
+            (s\np)\(s\np)       
           ----  <
           s\np
     ----  <
@@ -163,25 +163,23 @@
 | headache | n                |
 
 
-       The
-       ----
-       np/n
+         The
+         ----
+         np/n
              wine
              ----
              n
-         ----  >
-         n
-             that
-             ----
-             (n\n)/(s\np)
-                   she
-                   ----
-                   np
+               that
+               ----
+               (n\n)/(s/np)
+                 she
+                 ----
+                 np
                  ----  T
-                 s/(s\np)
-                   bought
-                   ----
-                   (s\np)/np
+                 s/(s\np);
+                 bought
+                 ----
+                 (s\np)/np
                ----  >B
                s/np
              ----  >
@@ -189,11 +187,10 @@
          ----  <
          n
       ----  >
-      np
-
-        gave me a headache
-        ----
-        s\np
+      np;
+      gave me a headache
+      ----
+      s\np
     ----  <
     s
 
@@ -318,5 +315,3 @@ Object control since persuade is an object control verb.
         s\np: \s. persuaded'(s, lily', forgive'(lily', barney')
     ---- <
     s: persuaded'(marshall', lily', forgive'(lily', barney')
-
-

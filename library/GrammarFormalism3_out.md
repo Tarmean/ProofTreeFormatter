@@ -26,30 +26,24 @@ header-includes:
 | the       | np/n                  |
 | park      | n                     |
 \begin{prooftree}
-\AxiomC{}
-\UnaryInfC{she}
+\AxiomC{she}
 \UnaryInfC{np}
-\AxiomC{}
-\UnaryInfC{runs}
+\AxiomC{runs}
 \UnaryInfC{s\textbackslash{}np}
-\AxiomC{}
-\UnaryInfC{regularly}
+\AxiomC{regularly}
 \UnaryInfC{(s\textbackslash{}np)\textbackslash{}(s\textbackslash{}np)}
 \RightLabel{\scriptsize(<)}
 \BinaryInfC{s\textbackslash{}np}
-\AxiomC{}
-\UnaryInfC{in}
+\AxiomC{in}
 \UnaryInfC{((s\textbackslash{}np)\textbackslash{}(s\textbackslash{}np))/np}
-\AxiomC{}
-\UnaryInfC{the}
+\AxiomC{the}
 \UnaryInfC{np/n}
-\AxiomC{}
-\UnaryInfC{park}
+\AxiomC{park}
 \UnaryInfC{n}
 \RightLabel{\scriptsize(>)}
 \BinaryInfC{np}
 \RightLabel{\scriptsize(>)}
-\BinaryInfC{((s\textbackslash{}np)\textbackslash{}(s\textbackslash{}np))       }
+\BinaryInfC{(s\textbackslash{}np)\textbackslash{}(s\textbackslash{}np)       }
 \RightLabel{\scriptsize(<)}
 \BinaryInfC{s\textbackslash{}np}
 \RightLabel{\scriptsize(<)}
@@ -74,30 +68,25 @@ header-includes:
 | Shelly   | np              |
 | Stan     | np              |
 \begin{prooftree}
-\AxiomC{}
-\UnaryInfC{they}
+\AxiomC{they}
 \UnaryInfC{np}
 \RightLabel{\scriptsize(T)}
 \UnaryInfC{s/(s\textbackslash{}np)}
-\AxiomC{}
-\UnaryInfC{named}
+\AxiomC{named}
 \UnaryInfC{((s\textbackslash{}np)/np)/np}
 \RightLabel{\scriptsize(>B2)}
 \BinaryInfC{(s/np)/np}
-\AxiomC{}
-\UnaryInfC{their son Stan and their daughter Shelly}
+\AxiomC{their son Stan and their daughter Shelly}
 \UnaryInfC{s\textbackslash{}((s/np)/np)}
 \RightLabel{\scriptsize(<)}
 \BinaryInfC{s}
 \end{prooftree}
 \begin{prooftree}
-\AxiomC{}
-\UnaryInfC{their son}
+\AxiomC{their son}
 \UnaryInfC{np}
 \RightLabel{\scriptsize(T)}
 \UnaryInfC{(s/np)\textbackslash{}((s/np)/np)}
-\AxiomC{}
-\UnaryInfC{Stan}
+\AxiomC{Stan}
 \UnaryInfC{np}
 \RightLabel{\scriptsize(T)}
 \UnaryInfC{s\textbackslash{}(s/np)}
@@ -105,13 +94,11 @@ header-includes:
 \BinaryInfC{s\textbackslash{}((s/np)/np)}
 \end{prooftree}
 \begin{prooftree}
-\AxiomC{}
-\UnaryInfC{their daughter}
+\AxiomC{their daughter}
 \UnaryInfC{np}
 \RightLabel{\scriptsize(T)}
 \UnaryInfC{(s/np)\textbackslash{}((s/np)/np)}
-\AxiomC{}
-\UnaryInfC{Shelly}
+\AxiomC{Shelly}
 \UnaryInfC{np}
 \RightLabel{\scriptsize(T)}
 \UnaryInfC{s\textbackslash{}(s/np)}
@@ -119,34 +106,27 @@ header-includes:
 \BinaryInfC{s\textbackslash{}((s/np)/np)}
 \end{prooftree}
 \begin{prooftree}
-\AxiomC{}
-\UnaryInfC{their daughter Shelly}
+\AxiomC{their daughter Shelly}
 \UnaryInfC{s\textbackslash{}((s/np)/np)}
-\AxiomC{}
-\UnaryInfC{and}
+\AxiomC{and}
 \UnaryInfC{(X\textbackslash{}X)/X}
-\AxiomC{}
-\UnaryInfC{their son Stan}
+\AxiomC{their son Stan}
 \UnaryInfC{s\textbackslash{}((s/np)/np)}
 \RightLabel{\scriptsize(andrule)}
 \TrinaryInfC{s\textbackslash{}((s/np)/np)}
 \end{prooftree}
 \begin{prooftree}
-\AxiomC{}
-\UnaryInfC{their}
+\AxiomC{their}
 \UnaryInfC{np/n}
-\AxiomC{}
-\UnaryInfC{daughter}
+\AxiomC{daughter}
 \UnaryInfC{n}
 \RightLabel{\scriptsize(>)}
 \BinaryInfC{np}
 \end{prooftree}
 \begin{prooftree}
-\AxiomC{}
-\UnaryInfC{their}
+\AxiomC{their}
 \UnaryInfC{np/n}
-\AxiomC{}
-\UnaryInfC{son}
+\AxiomC{son}
 \UnaryInfC{n}
 \RightLabel{\scriptsize(>)}
 \BinaryInfC{np}
@@ -169,55 +149,41 @@ header-includes:
 | a        | np/n             |
 | headache | n                |
 \begin{prooftree}
-\AxiomC{}
-\UnaryInfC{The}
+\AxiomC{The}
 \UnaryInfC{np/n}
-\AxiomC{}
-\UnaryInfC{wine}
+\AxiomC{wine}
 \UnaryInfC{n}
-\RightLabel{\scriptsize(>)}
-\UnaryInfC{n}
-\AxiomC{}
-\UnaryInfC{that}
-\UnaryInfC{(n\textbackslash{}n)/(s\textbackslash{}np)}
-\AxiomC{}
-\UnaryInfC{she}
+\AxiomC{that}
+\UnaryInfC{(n\textbackslash{}n)/(s/np)}
+\AxiomC{she}
 \UnaryInfC{np}
 \RightLabel{\scriptsize(T)}
 \UnaryInfC{s/(s\textbackslash{}np)}
-\AxiomC{}
-\UnaryInfC{bought}
+\AxiomC{bought}
 \UnaryInfC{(s\textbackslash{}np)/np}
 \RightLabel{\scriptsize(>B)}
 \BinaryInfC{s/np}
 \RightLabel{\scriptsize(>)}
-\UnaryInfC{n\textbackslash{}n}
+\BinaryInfC{n\textbackslash{}n}
 \RightLabel{\scriptsize(<)}
 \BinaryInfC{n}
 \RightLabel{\scriptsize(>)}
-\TrinaryInfC{np}
-\end{prooftree}
-\begin{prooftree}
-\AxiomC{}
-\UnaryInfC{gave me a headache}
+\BinaryInfC{np}
+\AxiomC{gave me a headache}
 \UnaryInfC{s\textbackslash{}np}
 \RightLabel{\scriptsize(<)}
-\UnaryInfC{s}
+\BinaryInfC{s}
 \end{prooftree}
 \begin{prooftree}
-\AxiomC{}
-\UnaryInfC{gave}
+\AxiomC{gave}
 \UnaryInfC{((s\textbackslash{}np)/np)/np}
-\AxiomC{}
-\UnaryInfC{me}
+\AxiomC{me}
 \UnaryInfC{np}
 \RightLabel{\scriptsize(>)}
 \BinaryInfC{(s\textbackslash{}np)/np}
-\AxiomC{}
-\UnaryInfC{a}
+\AxiomC{a}
 \UnaryInfC{np/n}
-\AxiomC{}
-\UnaryInfC{headache}
+\AxiomC{headache}
 \UnaryInfC{n}
 \RightLabel{\scriptsize(>)}
 \BinaryInfC{np}
@@ -242,17 +208,13 @@ header-includes:
 | the     | np/n                      |
 | video   | n                         |
 \begin{prooftree}
-\AxiomC{}
-\UnaryInfC{should}
+\AxiomC{should}
 \UnaryInfC{((s\textbackslash{}np)/np)/((s\textbackslash{}np)/np)}
-\AxiomC{}
-\UnaryInfC{watch}
+\AxiomC{watch}
 \UnaryInfC{(s\textbackslash{}np)/np}
-\AxiomC{}
-\UnaryInfC{and}
+\AxiomC{and}
 \UnaryInfC{((X\textbackslash{}X)/X)}
-\AxiomC{}
-\UnaryInfC{analyse}
+\AxiomC{analyse}
 \UnaryInfC{(s\textbackslash{}np)/np}
 \RightLabel{\scriptsize(andrule)}
 \TrinaryInfC{((s\textbackslash{}np)/np)}
@@ -260,14 +222,11 @@ header-includes:
 \BinaryInfC{(s\textbackslash{}np)/np}
 \end{prooftree}
 \begin{prooftree}
-\AxiomC{}
-\UnaryInfC{the}
+\AxiomC{the}
 \UnaryInfC{np/n}
-\AxiomC{}
-\UnaryInfC{angry}
+\AxiomC{angry}
 \UnaryInfC{n/n}
-\AxiomC{}
-\UnaryInfC{referee}
+\AxiomC{referee}
 \UnaryInfC{n}
 \RightLabel{\scriptsize(>)}
 \BinaryInfC{n}
@@ -275,17 +234,13 @@ header-includes:
 \BinaryInfC{np}
 \end{prooftree}
 \begin{prooftree}
-\AxiomC{}
-\UnaryInfC{the angry referee}
+\AxiomC{the angry referee}
 \UnaryInfC{np}
-\AxiomC{}
-\UnaryInfC{should watch and analyse}
+\AxiomC{should watch and analyse}
 \UnaryInfC{(s\textbackslash{}np)/np}
-\AxiomC{}
-\UnaryInfC{the}
+\AxiomC{the}
 \UnaryInfC{np/n}
-\AxiomC{}
-\UnaryInfC{video}
+\AxiomC{video}
 \UnaryInfC{n}
 \RightLabel{\scriptsize(>)}
 \BinaryInfC{np}
@@ -305,22 +260,17 @@ Object control since persuade is an object control verb.
 
 ### b)
 \begin{prooftree}
-\AxiomC{}
-\UnaryInfC{Marshall}
+\AxiomC{Marshall}
 \UnaryInfC{np: marshall'}
-\AxiomC{}
-\UnaryInfC{persuaded}
+\AxiomC{persuaded}
 \UnaryInfC{((s\textbackslash{}np)/(sto\textbackslash{}np))/np: \textbackslash{}o p s. persuaded'(s, o, p(o))}
-\AxiomC{}
-\UnaryInfC{Lily}
+\AxiomC{Lily}
 \UnaryInfC{np: lily'}
 \RightLabel{\scriptsize(>)}
 \BinaryInfC{(s\textbackslash{}np)/(sto\textbackslash{}np): \textbackslash{}p s. persuaded'(s, lily', p(lily'))}
-\AxiomC{}
-\UnaryInfC{to forgive}
+\AxiomC{to forgive}
 \UnaryInfC{(sto\textbackslash{}np)/np: \textbackslash{}y x. forgive'(x,y)}
-\AxiomC{}
-\UnaryInfC{Barney}
+\AxiomC{Barney}
 \UnaryInfC{np: barney'}
 \RightLabel{\scriptsize(>)}
 \BinaryInfC{sto\textbackslash{}np: \textbackslash{}x. forgive'(x, barney')}
