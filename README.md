@@ -2,19 +2,32 @@ Formatter for proof trees.
 
 Example:
 
-       they
-       ----
-       np
-       ----  T
-       s/(s\np);
-       named
-       ----
-       ((s\np)/np)/np
-     ----  >B2
-     (s/np)/np;
-     their son Stan and their daughter Shelly
-     ----
-     s\((s/np)/np)
+          she
+          ----
+          np
+                runs
+                ----
+                s\np;
+                regularly
+                ----
+                (s\np)\(s\np)
+            ---- <
+            s\np
+                in
+                ----
+                ((s\np)\(s\np))/np
+                    the
+                    ----
+                    np/n;
+                    park
+                    ----
+                    n
+                ----  >
+                np
+            ----  >
+            ((s\np)\(s\np))       
+          ----  <
+          s\np
     ----  <
     s
 
