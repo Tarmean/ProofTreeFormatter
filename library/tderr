@@ -1,0 +1,29 @@
+C:\Users\Cyril\AppData\Roaming\local\bin\stack.exe exec Scratch +RTS -stderr 
+     391,916,824 bytes allocated in the heap
+      59,186,536 bytes copied during GC
+       7,931,576 bytes maximum residency (10 sample(s))
+         411,976 bytes maximum slop
+              23 MB total memory in use (0 MB lost due to fragmentation)
+
+                                     Tot time (elapsed)  Avg pause  Max pause
+  Gen  0       369 colls,     0 par    0.062s   0.088s     0.0002s    0.0154s
+  Gen  1        10 colls,     0 par    0.000s   0.009s     0.0009s    0.0076s
+
+  TASKS: 4 (1 bound, 3 peak workers (3 total), using -N1)
+
+  SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+
+  INIT    time    0.000s  (  0.001s elapsed)
+  MUT     time    0.172s  (  1.958s elapsed)
+  GC      time    0.062s  (  0.097s elapsed)
+  EXIT    time    0.000s  ( -0.007s elapsed)
+  Total   time    0.234s  (  2.049s elapsed)
+
+  Alloc rate    2,280,243,339 bytes per MUT second
+
+  Productivity  73.3% of total user, 95.3% of total elapsed
+
+gc_alloc_block_sync: 0
+whitehole_spin: 0
+gen[0].sync: 0
+gen[1].sync: 0
